@@ -5,6 +5,7 @@ m <- rbind(c(1, 1), c(2, 3), c(4,5), c(6,7))
 layout(m)
 par(mar=c(5.1,4.1,5.1,2.1))
 plot(1, type = "n", axes=FALSE, xlab="", ylab="", main = "Relation between mean covered charges\nand mean total payments by medical condition")
+## TODO: check if the fill 1:7 follows the same color assignment as the plot
 legend("top", title = "Medical condition", legend = medicalCondition, fill = 1:7)
 for (state in unique(data$Provider.State)) {
   d <- subset(data, Provider.State == state)
